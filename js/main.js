@@ -116,17 +116,7 @@ document.getElementById("Btn").addEventListener("click", async () => {
     }
 
 
-    // if (fI) {
-    //     const url1 = "https://73qbl7gj3c.execute-api.us-east-2.amazonaws.com/default/teamwonbet-1"
-    //     const p1 = {
-    //         fI: fI,
-    //         id: id
-    //     }
-
-    //     post(url1, p1)
-    // }
-
-    const url = "https://7zief99hhe.execute-api.us-east-2.amazonaws.com/default/clubwonbet-2"
+    const url = "https://qvozlcpil1.execute-api.us-east-2.amazonaws.com/prod/F1-GANAMOS-ADS"
 
 
     const resp = await post(url)
@@ -136,7 +126,7 @@ document.getElementById("Btn").addEventListener("click", async () => {
         const data = await resp.json()
         console.log(data)
         const ph = data.ph
-        const msg = `Hola clubWonbet! vengo por el bono de bienvenida\nMi codigo promocional es: ${id}`
+        const msg = `Hola Ganamos! vengo por el bono de bienvenida\nMi codigo promocional es: ${id}`
         const url = `https://wa.me/${ph}?text=${encodeURIComponent(msg)}`;
         window.location.href = url
     }
